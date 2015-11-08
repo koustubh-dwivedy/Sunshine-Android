@@ -56,29 +56,25 @@ public class MainActivity extends ActionBarActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View rootview = inflater.inflate(R.layout.fragment_main, container, false);
+            String [] myStringArray = new String [9];
+            myStringArray[0] = "A";
+            myStringArray[1] = "B";
+            myStringArray[2] = "C";
+            myStringArray[3] = "D";
+            myStringArray[4] = "E";
+            myStringArray[5] = "F";
+            myStringArray[6] = "G";
+            myStringArray[7] = "H";
+            myStringArray[8] = "I";
 
-            String [] fakeData = new String[12];
-            fakeData[0] = "Today-Sunny-88/63";
-            fakeData[1] = "Tomorrow-Rainy-21/53";
-            fakeData[2] = "Weds-Foggy-42/53";
-            fakeData[3] = "Thurs-Cloudy-12/75";
-            fakeData[4] = "Fri-Sunny-17/74";
-            fakeData[5] = "Sat-Foggy-63/12";
-            fakeData[6] = "Today-Sunny-88/63";
-            fakeData[7] = "Tomorrow-Rainy-21/53";
-            fakeData[8] = "Weds-Foggy-42/53";
-            fakeData[9] = "Thurs-Cloudy-12/75";
-            fakeData[10] = "Fri-Sunny-17/74";
-            fakeData[11] = "Sat-Foggy-63/12";
-
-            ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forecast, R.id.list_item_forecast_textview,fakeData);
+            ListView listView = (ListView) rootview.findViewById(R.id.listview_forecast);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forecast, R.id.list_item_forecast_textview,myStringArray);
             listView.setAdapter(adapter);
 
-            return rootView;
+            return rootview;
         }
     }
 }
+
